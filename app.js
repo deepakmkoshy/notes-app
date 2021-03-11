@@ -5,6 +5,24 @@ const yargs = require('yargs');
 // console.log(process.argv);
 yargs.version('1.1.0')
 
+// Crate a remove function
+
+yargs.command({
+    command: 'rem',
+    describe: 'Remove a note',
+    builder:{
+        title: {
+            describe: 'Removed',
+            demandOption: true,
+            type: 'string'
+        }
+        
+    },
+    handler: (argv)=>{
+        notes.removeNotes(argv.title)
+    }
+})
+
 //Create add comment
 yargs.command({
     command: 'add',
