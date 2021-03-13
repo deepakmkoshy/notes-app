@@ -7,6 +7,8 @@ yargs.version('1.1.0')
 
 // Crate a remove function
 
+
+
 yargs.command({
     command: 'rem',
     describe: 'Remove a note',
@@ -57,7 +59,7 @@ yargs.command({
     command: 'list',
     describe: 'Display the list',
     handler: ()=>
-        console.log("List:")
+        notes.listNotes()
     
 })
 yargs.command({
